@@ -1,0 +1,16 @@
+body {
+    font-family: monospace;
+
+}
+.header {
+    text-align: left;
+    padding: 20px;
+}
+
+.card {
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+
