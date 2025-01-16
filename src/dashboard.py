@@ -11,12 +11,6 @@ server = flask.Flask(__name__)
 def index():
     return 'Hello Flask app'
 
-app = dash.Dash(
-    __name__,
-    server=server,
-    routes_pathname_prefix='/dash/'
-)
-
 def load_data():
     activities = pd.read_csv("data/activities.csv")
     activities["date"] = pd.to_datetime(activities["date"])
@@ -103,7 +97,8 @@ leaflet_map = dl.Map(
     style={"width": "100%", "height": "500px", "margin": "auto"},
 )
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY], server=server,
+    routes_pathname_prefix='/dash/')
 
 
 app.layout = dbc.Container([
