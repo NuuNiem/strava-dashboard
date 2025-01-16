@@ -13,4 +13,6 @@ body {
     border-radius: 10px;
 }
 
+.modebar { display: none !important; }
+
 
