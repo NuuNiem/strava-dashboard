@@ -5,11 +5,6 @@ import pandas as pd
 import dash_bootstrap_components as dbc
 import flask
 
-server = flask.Flask(__name__)
-
-@server.route('/')
-def index():
-    return 'Hello Flask app'
 
 def load_data():
     activities = pd.read_csv("data/activities.csv")
@@ -97,8 +92,8 @@ leaflet_map = dl.Map(
     style={"width": "100%", "height": "500px", "margin": "auto"},
 )
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY], server=server,
-    routes_pathname_prefix='/dash/')
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY],
+    routes_pathname_prefix='/')
 
 
 app.layout = dbc.Container([
