@@ -96,6 +96,7 @@ leaflet_map = dl.Map(
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY],
     routes_pathname_prefix='/')
 
+app.title = "Strava Dashboard"
 
 app.layout = dbc.Container([
     dbc.Row([
