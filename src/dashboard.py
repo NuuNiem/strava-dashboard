@@ -91,6 +91,8 @@ leaflet_map = dl.Map(
 )
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
+server = app.server
+
 app.layout = dbc.Container([
     dbc.Row([
         dbc.Col(html.H1("Strava Dashboard", className="mb-4 header"), width=12)
