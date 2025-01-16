@@ -4,6 +4,7 @@ import dash_leaflet as dl
 import pandas as pd
 import dash_bootstrap_components as dbc
 import flask
+import os
 
 
 def load_data():
@@ -165,4 +166,5 @@ def update_map(min_distance):
     return create_map_layers(min_distance)
 
 if __name__ == "__main__":
-    app.run_server(debug=True) 
+    port = int(os.environ.get("PORT", 8050))
+    app.run_server(debug=True, host="0.0.0.0", port=port)
