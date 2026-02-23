@@ -18,5 +18,20 @@ venv/
 .DS_Store
 Thumbs.db
 
+# Distribution / packaging
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Test & coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type checkers & linters
+.mypy_cache/
+.ruff_cache/
+
 # Logs
 *.log
