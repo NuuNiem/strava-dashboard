@@ -1,12 +1,98 @@
 body {
-    font-family: monospace;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
 }
-.header {
-    text-align: left;
-    padding: 20px;
+
+/* Header accent */
+.strava-header {
+    border-left: 4px solid #FC4C02;
+    padding-left: 14px;
 }
+
+/* KPI strip cards */
+.kpi-card {
+    border-top: 3px solid #FC4C02 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    background: #222 !important;
+}
+
+.kpi-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #888;
+}
+
+.kpi-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* Stats / PB cards */
 .card {
-    padding: 10px;
-    margin: 20px;
-    border-radius: 10px;
+    padding: 6px;
+    border-radius: 8px;
+    background: #1e1e1e !important;
+}
+
+/* Goal progress bar */
+.progress-bar {
+    background-color: #FC4C02 !important;
+}
+
+/* Activity cards */
+.activity-card {
+    background: #1e1e1e !important;
+    border: 1px solid #333 !important;
+    border-radius: 8px;
+    transition: border-color 0.15s;
+}
+
+.activity-card:hover {
+    border-color: #FC4C02 !important;
+}
+
+.activity-card-header {
+    background: #252525 !important;
+    border-bottom: 1px solid #333 !important;
+    padding: 8px 12px;
+}
+
+.activity-name {
+    font-size: 0.9rem;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+/* Stat blocks inside activity cards */
+.stat-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 4px 0;
+}
+
+.stat-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 6px;
+}
+
+.stat-unit {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #888;
+}
+
+.stat-val {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
 }

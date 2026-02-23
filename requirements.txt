@@ -1,6 +1,7 @@
 dash
 dash-bootstrap-components
 pandas
+plotly
 polyline
 python-dotenv
 requests
